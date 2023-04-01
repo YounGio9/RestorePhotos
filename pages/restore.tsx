@@ -13,7 +13,7 @@ import appendNewToName from "../utils/appendNewToName";
 import downloadPhoto from "../utils/downloadPhoto";
 import NSFWPredictor from "../utils/nsfwCheck";
 import va from "@vercel/analytics";
-import { useSession, signIn } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/react";
 import useSWR from "swr";
 import { Rings } from "react-loader-spinner";
 
@@ -105,6 +105,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <button onClick={() => signOut()} >Sign Out </button>
       <Header photo={session?.user?.image || undefined} />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
         <a
@@ -116,7 +117,7 @@ const Home: NextPage = () => {
           <span className="font-semibold">647,143 images</span> restored and
           counting
         </a>
-        <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-900 sm:text-6xl mb-5">
+        <h1 className="mx-auto max-w-4xl text-black font-display dark:text-white text-4xl font-bold tracking-normal text-slate-900 sm:text-6xl mb-5">
           Restore any face photo
         </h1>
         {status === "authenticated" && data && (

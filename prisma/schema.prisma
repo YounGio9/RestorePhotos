@@ -1,6 +1,6 @@
 datasource db {
   provider          = "postgresql"
-  url               = "postgres://carrental_e2ta_user:Q40aHxYTdJ01dMXJ2wm9XojhpE6pb9ZE@dpg-cg84qepmbg53mc3vdnjg-a.oregon-postgres.render.com/carrental_e2ta"
+  url               = env("DATABASE_URL")
 }
 
 generator client {

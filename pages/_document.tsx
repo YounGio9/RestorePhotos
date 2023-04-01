@@ -3,9 +3,11 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" className="[color-scheme:dark]">
+      <Html lang="en" className="dark">
         <Head>
           <link rel="icon" href="/favicon.ico" />
+<link href="https://fonts.cdnfonts.com/css/euclid-circular-b" rel="stylesheet" />
+
           <meta
             name="description"
             content="Restore your old face photos and keep the memories alive."
@@ -31,7 +33,7 @@ class MyDocument extends Document {
             content="https://restore-photos.vercel.app/og-image.png"
           />
         </Head>
-        <body>
+        <body className="font-euclid bg-black dark:bg-white">
           <Main />
           <NextScript />
         </body>

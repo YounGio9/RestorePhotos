@@ -6,17 +6,18 @@ import {
 export const CompareSlider = ({
   original,
   restored,
+  width
 }: {
   original: string;
   restored: string;
+  width?: number
 }) => {
   return (
     <ReactCompareSlider
       itemOne={<ReactCompareSliderImage src={original} alt="original photo" />}
       itemTwo={<ReactCompareSliderImage src={restored} alt="restored photo" />}
-      itemThree={<ReactCompareSliderImage src={restored} alt="back" />}
       portrait
-      className="flex w-[475px] mt-5"
+      className={`flex w-[${width ? width : 475}px] mt-5`}
     />
   );
 };
