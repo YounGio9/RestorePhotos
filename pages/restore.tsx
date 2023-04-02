@@ -117,7 +117,7 @@ const Home: NextPage = () => {
           <span className="font-semibold">647,143 images</span> restored and
           counting
         </a>
-        <h1 className="mx-auto max-w-4xl text-black font-display dark:text-white text-4xl font-bold tracking-normal text-slate-900 sm:text-6xl mb-5">
+        <h1 className="dark:text-slate-900 text-white  mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal sm:text-6xl mb-5">
           Restore any face photo
         </h1>
         {status === "authenticated" && data && (
