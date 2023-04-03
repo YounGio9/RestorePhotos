@@ -12,13 +12,9 @@ export default function Header({ photo }: { photo?: string | undefined }) {
     document.documentElement.className = `${dark ? "dark" : ""}`;
   }, [dark]);
 
-  useEffect(() => {
-    console.log(dark);
-  }, [dark]);
-
   return (
-    <header className="flex justify-between items-center w-full pb-7 sm:px-4 px-2">
-      <Link href="/" className="flex space-x-2">
+    <header className="flex justify-between items-center w-full pb-7 sm:px-4">
+      <Link href="/" className="flex ml-16 space-x-2">
         <Image
           alt="header text"
           src="/imageIcon.png"
@@ -31,14 +27,14 @@ export default function Header({ photo }: { photo?: string | undefined }) {
         </h1>
       </Link>
       <div>
-        <button
+        {/* <button
           onClick={() => setDark(!dark)}
           className="dark:bg-white dark:text-black text-black' text-white px-8 mr-6 py-2 font-bold rounded-full"
         >
           {" "}
           <span>{dark ? "Dark" : "Light"} </span> mode{" "}
-        </button>
-        <Link className="text-white dark:text-black" href={"/"}>
+        </button> */}
+        <Link className="text-white font-bold mr-16 dark:text-black" href={"/"}>
           Contact Us
         </Link>
       </div>
