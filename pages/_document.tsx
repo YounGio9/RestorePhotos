@@ -12,6 +12,7 @@ class MyDocument extends Document {
             name="description"
             content="Restore your old face photos and keep the memories alive."
           />
+          <meta name="viewport" content="width=device-width, user-scalable=no"/>
           <meta property="og:site_name" content="restorePhotos.io" />
           <meta
             property="og:description"
