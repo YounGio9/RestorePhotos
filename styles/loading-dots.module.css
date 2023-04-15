@@ -9,11 +9,6 @@
   margin-right: 2px;
 }
 
-body, html {
-  width: 100%;
-  overflow: hidden;
-}
-
 
 .loading span {
   animation-name: blink;

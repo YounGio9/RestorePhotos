@@ -13,7 +13,7 @@ export default function Header({ photo }: { photo?: string | undefined }) {
   }, [dark]);
 
   return (
-    <header className="flex justify-between items-center w-full pb-7 sm:px-4">
+    <header className="flex justify-between items-center w-full pb-7">
       <Link href="/" className="flex ml-16 space-x-2">
         <Image
           alt="header text"

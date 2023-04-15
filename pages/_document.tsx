@@ -3,7 +3,7 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" className="dark">
+      <Html lang="en" className="dark" style={{width: '100%'}}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
 <link href="https://fonts.cdnfonts.com/css/euclid-circular-b" rel="stylesheet" />
@@ -34,7 +34,7 @@ class MyDocument extends Document {
             content="https://restore-photos.vercel.app/og-image.png"
           />
         </Head>
-        <body className="font-euclid bg-black dark:bg-white">
+        <body className="font-euclid bg-black dark:bg-white" style={{width: '100%', overflowX: 'hidden'}}>
           <Main />
           <NextScript />
         </body>
